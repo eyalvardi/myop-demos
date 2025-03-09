@@ -5,9 +5,33 @@ import { Hero, HeroService } from '@nx-20-ng-19/shared';
 
 @Component({
   selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
   imports: [RouterLink],
   styleUrls: ['./heroes.component.css'],
+  template: `
+    <h2>My Heroes</h2>
+
+    <div>
+      <label for="new-hero">Hero name: </label>
+      <input id="new-hero" #heroName />
+
+      <!-- (click) passes input value to add() and then clears the input -->
+      <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+        Add hero
+      </button>
+    </div>
+
+    <ul class="heroes">
+      @for (hero of heroes; track hero) {
+        <li>
+          <a routerLink="/detail/{{hero.id}}">
+            <span class="badge">{{hero.id}}</span> {{hero.name}}
+          </a>
+          <button type="button" class="delete" title="delete hero"
+                  (click)="delete(hero)">x</button>
+        </li>
+      }
+    </ul>
+  `
 })
 export class HeroesComponent implements OnInit {
   private heroService = inject(HeroService);

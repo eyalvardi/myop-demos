@@ -14,7 +14,7 @@ export * from './lib/dashboard/demos/myop-html-demo.component';
 export * from './lib/dashboard/demos/myop-container-cmp-demo.component';
 
 // expose for standalone usage :
-exposeAngularComponent(DashboardComponent, 'myop-dashboard', null, {
+exposeAngularComponent(DashboardComponent, 'myop-dashboard2', null, {
     providers: [
         provideAnimations(),
         provideHttpClient(),

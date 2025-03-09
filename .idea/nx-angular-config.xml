@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="NxAngularConfigService" workspaceLocation="file://$PROJECT_DIR$/nx.json" />
+  <component name="NxAngularConfigService" workspaceLocation="file://$PROJECT_DIR$/nx.json">
+    <projects>
+      <project name="dashboard" file="file://$PROJECT_DIR$/libs/dashboard/project.json" />
+      <project name="my-site" file="file://$PROJECT_DIR$/apps/my-site/project.json" />
+      <project name="myop" file="file://$PROJECT_DIR$/libs/myop/project.json" />
+      <project name="shared" file="file://$PROJECT_DIR$/libs/shared/project.json" />
+    </projects>
+  </component>
 </project>
