@@ -10,7 +10,7 @@ import { Hero,HeroSearchComponent,HeroService} from '@nx-20-ng-19/shared';
   template:`
     <!-- Hero Image Section -->
     <div class="hero-header" style="background-image: url('assets/hero-image.jpg');">
-      <h1>Welcome to Hero Central</h1>
+      <h1>Welcome to Hero Central :-)</h1>
     </div>
 
     <!-- Description Section -->

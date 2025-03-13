@@ -48,7 +48,7 @@ export class MyopComponentLoaderService {
 
         const flow = await this.userFlows[flowId];
         const component = await this.hostSDK!.loadComponent(
-            flow!.components.find(c => c.type.id === componentId)!, nativeElementContainer, {hidden: false}
+            flow!.components.find(c => c.type.id === componentId)!, nativeElementContainer, {hidden: false, hooks:{useLatest:()=> true}}
         );
         return component;
     }
